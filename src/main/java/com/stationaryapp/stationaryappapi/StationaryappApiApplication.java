@@ -8,6 +8,7 @@ public class StationaryappApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StationaryappApiApplication.class, args);
+		System.out.println("hai");
 	}
 
 }

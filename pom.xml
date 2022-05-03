@@ -15,6 +15,9 @@
 	<description>stationaryapp project for Spring Boot</description>
 	<properties>
 		<java.version>16</java.version>
+		<sonar.projectkey>stationaryapp-api</sonar.projectkey>
+		<sonar.organization>kv-b1-2022</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -70,7 +73,13 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.8.0.2131</version>
+			</plugin>
 		</plugins>
+		
 	</build>
 
 </project>
