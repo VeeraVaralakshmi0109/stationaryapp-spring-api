@@ -16,7 +16,7 @@
 	<properties>
 		<java.version>16</java.version>
 		<sonar.projectkey>stationaryapp-api</sonar.projectkey>
-		<sonar.organization>kv-b1-2022</sonar.organization>
+		<sonar.organization>veeravaralakshmi0109</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
