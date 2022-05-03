@@ -22,11 +22,11 @@ public class StationaryController {
 	StationaryRepository stationaryRepository;
 
 	@PostMapping("stationaryapp_List/save")
-	public StationaryList save(@RequestBody StationaryList stationarylist) {
-		System.out.println(stationarylist);
-		stationaryRepository.save(stationarylist);
+	public StationaryList save(@RequestBody StationaryList stationaryList) {
+		System.out.println(stationaryList);
+		stationaryRepository.save(stationaryList);
 		System.out.println("registered");
-		return stationarylist;
+		return stationaryList;
 
 	}
 
@@ -36,9 +36,9 @@ public class StationaryController {
 	}
 
 	@PutMapping("stationaryapp_List/{id}")
-	public void update(@PathVariable("id") Integer id, @RequestBody StationaryList stationarylist) {
-		stationarylist.setId(id);
-		stationaryRepository.save(stationarylist);
+	public void update(@PathVariable("id") Integer id, @RequestBody StationaryList stationaryList) {
+		stationaryList.setId(id);
+		stationaryRepository.save(stationaryList);
 
 	}
 
@@ -51,9 +51,9 @@ public class StationaryController {
 
 	@GetMapping("stationaryapp_List/{id}")
 	public StationaryList findById(@PathVariable("id") Integer id) {
-		Optional<StationaryList> stationarylist = stationaryRepository.findById(id);
-		if (stationarylist.isPresent()) {
-			StationaryList obj = stationarylist.get();
+		Optional<StationaryList> stationaryList = stationaryRepository.findById(id);
+		if (stationaryList.isPresent()) {
+			StationaryList obj = stationaryList.get();
 			return obj;
 		} else {
 			return null;
