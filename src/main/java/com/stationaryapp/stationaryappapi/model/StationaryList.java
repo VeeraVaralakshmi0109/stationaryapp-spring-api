@@ -18,7 +18,7 @@ public class StationaryList {
 
 	@Override
 	public String toString() {
-		return "StationaryList [id=" + id + ", items_name=" + items_name + ", brand_name=" + brand_name + ", price="
+		return "StationaryList [id=" + id + ", items_name=" + itemsname + ", brand_name=" + brandname + ", price="
 				+ price + "]";
 	}
 
@@ -30,20 +30,20 @@ public class StationaryList {
 		this.id = id;
 	}
 
-	public String getItems_name() {
-		return items_name;
+	public String getItemsname() {
+		return itemsname;
 	}
 
-	public void setItems_name(String items_name) {
-		this.items_name = items_name;
+	public void setItemsname(String itemsname) {
+		this.itemsname = itemsname;
 	}
 
-	public String getBrand_name() {
-		return brand_name;
+	public String getBrandname() {
+		return brandname;
 	}
 
-	public void setBrand_name(String brand_name) {
-		this.brand_name = brand_name;
+	public void setBrandname(String brandname) {
+		this.brandname = brandname;
 	}
 
 	public float getPrice() {
@@ -60,10 +60,10 @@ public class StationaryList {
 	private int id;
 
 	@Column(name = "items_name", nullable = false, unique = true)
-	private String items_name;
+	private String itemsname;
 
 	@Column(name = "items_brandname")
-	private String brand_name;
+	private String brandname;
 
 	@Column(name = "price")
 	private float price;

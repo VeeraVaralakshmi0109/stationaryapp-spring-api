@@ -2,21 +2,19 @@ package com.stationaryapp.stationaryappapi.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
-@Data
-
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "admin")
+public class Admin {
+	@Override
+	public String toString() {
+		return "Admin [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", contact="
+				+ contact + "]";
+	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Integer id;
 
@@ -29,9 +27,8 @@ public class User {
 	@Column(name = "PASSWORD", nullable = false)
 	private String password;
 
-
 	@Column(name = "contact", nullable = false)
-	private String contact;
+	private Long contact;
 
 	public Integer getId() {
 		return id;
@@ -65,15 +62,13 @@ public class User {
 		this.password = password;
 	}
 
-	public String getContact() {
+	public long getContact() {
 		return contact;
 	}
 
-	public void setContact(String contact) {
+	public void setContact(long contact) {
 		this.contact = contact;
 	}
-
-
 
 }
 
